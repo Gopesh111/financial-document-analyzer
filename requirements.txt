@@ -1,7 +1,5 @@
+# --- Original Requirements (Preserved) ---
 click==8.1.7
-# Keep crewai at version 0.130.0
-# Other package versions are flexible and can be changed
-# Only change crewai version if there are critical dependency conflicts that cannot be resolved by other means
 crewai==0.130.0 
 crewai-tools==0.47.1
 fastapi==0.110.3
@@ -44,3 +42,10 @@ pip==24.0
 protobuf==4.25.3
 pydantic==1.10.13
 pydantic_core==2.8.0
+
+# --- New Additions for Bonus Features & Bug Fixes ---
+sqlalchemy>=2.0.0        # Required for Database Integration bonus
+pypdf>=4.0.0             # Required for robust PDF parsing in tools.py
+langchain-openai>=0.1.0  # Required for clean OpenAI integration in agents.py
+python-dotenv>=1.0.0     # Required for managing .env API keys
+python-multipart>=0.0.9  # Required for FastAPI to handle file uploads
